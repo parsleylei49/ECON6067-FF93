@@ -1,0 +1,96 @@
+{
+  "stock_raw_rows": 2423212,
+  "stock_start": 200001,
+  "stock_end": 202512,
+  "stock_unique_security_months": 2393591,
+  "stock_distinct_core_records": 2393591,
+  "duplicate_key_conflicts_by_column": {
+    "MthCalDt": 0,
+    "MthRet": 0,
+    "MthRetx": 0,
+    "MthCap": 0,
+    "MthPrc": 0,
+    "ShrOut": 0,
+    "SecInfoStartDt": 1542,
+    "SecInfoEndDt": 1542,
+    "PrimaryExch": 1542,
+    "SecurityType": 1542,
+    "SecuritySubType": 1542,
+    "ShareType": 1542,
+    "IssuerType": 0,
+    "USIncFlg": 1286,
+    "ConditionalType": 1542,
+    "TradingStatusFlg": 1542,
+    "MthDelFlg": 0
+  },
+  "MthRet_missing_rows": 30260,
+  "MthRetx_missing_rows": 30260,
+  "MthCap_missing_rows": 29436,
+  "rows_after_identical_selected_record_dedup": 2395133,
+  "rows_outside_security_info_interval": 13390,
+  "eligible_common_stock_rows": 1339347,
+  "eligible_duplicate_security_months": 0,
+  "eligible_return_below_minus_one": 0,
+  "eligible_delisting_months": 1175,
+  "market_cap_to_price_times_shares_median": 1.0,
+  "market_cap_units": "thousands USD; Compustat amounts are millions USD",
+  "compustat_rows": 301565,
+  "compustat_start": "2000-01-31",
+  "compustat_end": "2025-12-31",
+  "compustat_duplicate_company_statement_dates": 0,
+  "compustat_formats": {
+    "indfmt": {
+      "INDL": 301565
+    },
+    "datafmt": {
+      "STD": 301565
+    },
+    "consol": {
+      "C": 301565
+    },
+    "curcd": {
+      "USD": 253607,
+      "CAD": 47958
+    },
+    "costat": {
+      "A": 176111,
+      "I": 125454
+    }
+  },
+  "ccm_rows": 39761,
+  "ccm_linktype": {
+    "LC": 16902,
+    "LU": 15916,
+    "LS": 6943
+  },
+  "ccm_linkprim": {
+    "P": 31149,
+    "C": 8093,
+    "J": 422,
+    "N": 97
+  },
+  "official_factor_months": 1201,
+  "official_factor_start": "192607",
+  "official_factor_end": "202607",
+  "official_factor_header": "This file was created using the 202607 CRSP database.",
+  "scope": "Available stock/accounting data do not overlap the original July 1963–December 1991 test period.",
+  "course_requirements_status": "Project page is password-protected; detailed requirements not yet verified.",
+  "input_manifest": {
+    "monthly_stock.csv": {
+      "bytes": 1234957019,
+      "sha256": "7ddf7d1ee80945a667111d84b0cb70c92798ae9c3c68118e2316bfdd14dd1cc8"
+    },
+    "Compustat.csv": {
+      "bytes": 36889901,
+      "sha256": "5e17e192b51cc30074c6c6c5b133dfde747c138cd940e65070d2aa9c3e7eb870"
+    },
+    "CCM.csv": {
+      "bytes": 2052338,
+      "sha256": "c24c16477cc7674dc2e3bec02aa7bc4ce65c27af48e2e29cd8b044175645c8c4"
+    },
+    "F-F factors and RF.csv": {
+      "bytes": 52453,
+      "sha256": "347bdcabb60863073a120111b40cb21b1a0682d6a82e919df057bdbea15e3a73"
+    }
+  }
+}
