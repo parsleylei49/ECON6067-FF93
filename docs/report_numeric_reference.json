@@ -1,0 +1,567 @@
+{
+  "benchmark_comparison": [
+    {
+      "factor": "MKT_RF",
+      "start": "2000-01-31",
+      "end": "2025-12-31",
+      "n": 312,
+      "correlation": 0.999984554459213,
+      "mean_difference_bps": -0.3575658389336336,
+      "RMSE_bps": 2.6424991890891416,
+      "annual_tracking_error_pct": 0.0908426569667398,
+      "max_absolute_difference_bps": 13.081614679185884
+    },
+    {
+      "factor": "SMB",
+      "start": "2002-07-31",
+      "end": "2025-12-31",
+      "n": 282,
+      "correlation": 0.9973118735014984,
+      "mean_difference_bps": 0.5243307035505872,
+      "RMSE_bps": 18.35667077336053,
+      "annual_tracking_error_pct": 0.6367642888183844,
+      "max_absolute_difference_bps": 62.92151531472369
+    },
+    {
+      "factor": "HML",
+      "start": "2002-07-31",
+      "end": "2025-12-31",
+      "n": 282,
+      "correlation": 0.997205528297167,
+      "mean_difference_bps": -0.6311577037618085,
+      "RMSE_bps": 23.118250029853556,
+      "annual_tracking_error_pct": 0.8019643456712416,
+      "max_absolute_difference_bps": 84.44427487080688
+    }
+  ],
+  "summary_statistics": [
+    {
+      "factor": "MKT_RF",
+      "series": "reconstructed",
+      "n": 312,
+      "mean_monthly_pct": 0.6090845980209201,
+      "vol_annual_pct": 15.734757491331983,
+      "t_HAC6": 2.2671116202599664,
+      "p_HAC6": 0.0233834078952263,
+      "ci_low_monthly_pct": 0.0825186076255564,
+      "ci_high_monthly_pct": 1.1356505884162835
+    },
+    {
+      "factor": "MKT_RF",
+      "series": "benchmark",
+      "n": 312,
+      "mean_monthly_pct": 0.6126602564102566,
+      "vol_annual_pct": 15.709930861245066,
+      "t_HAC6": 2.2841938475127113,
+      "p_HAC6": 0.022360140997895,
+      "ci_low_monthly_pct": 0.0869640513221013,
+      "ci_high_monthly_pct": 1.1383564614984116
+    },
+    {
+      "factor": "SMB",
+      "series": "reconstructed",
+      "n": 282,
+      "mean_monthly_pct": 0.0212007538440165,
+      "vol_annual_pct": 8.677862834599976,
+      "t_HAC6": 0.1446425182202481,
+      "p_HAC6": 0.8849931255259467,
+      "ci_low_monthly_pct": -0.2660779418718431,
+      "ci_high_monthly_pct": 0.3084794495598762
+    },
+    {
+      "factor": "SMB",
+      "series": "benchmark",
+      "n": 282,
+      "mean_monthly_pct": 0.0159574468085106,
+      "vol_annual_pct": 8.68848493438653,
+      "t_HAC6": 0.1080303851121338,
+      "p_HAC6": 0.9139715894166864,
+      "ci_low_monthly_pct": -0.2735538883351116,
+      "ci_high_monthly_pct": 0.3054687819521329
+    },
+    {
+      "factor": "HML",
+      "series": "reconstructed",
+      "n": 282,
+      "mean_monthly_pct": -0.0327654777468379,
+      "vol_annual_pct": 10.72796698055926,
+      "t_HAC6": -0.1579210749575012,
+      "p_HAC6": 0.874518991031432,
+      "ci_low_monthly_pct": -0.4394189680256467,
+      "ci_high_monthly_pct": 0.3738880125319708
+    },
+    {
+      "factor": "HML",
+      "series": "benchmark",
+      "n": 282,
+      "mean_monthly_pct": -0.0264539007092198,
+      "vol_annual_pct": 10.669385452391476,
+      "t_HAC6": -0.1268138155638113,
+      "p_HAC6": 0.8990877607846864,
+      "ci_low_monthly_pct": -0.4353107150093814,
+      "ci_high_monthly_pct": 0.3824029135909417
+    }
+  ],
+  "extension_tests": [
+    {
+      "factor": "SMB",
+      "period": "full",
+      "series": "baseline",
+      "n": 282,
+      "mean_monthly_pct": 0.0212007538440165,
+      "vol_annual_pct": 8.677862834599976,
+      "t_HAC6": 0.1446425182202481,
+      "p_HAC6": 0.8849931255259467,
+      "ci_low_monthly_pct": -0.2660779418718431,
+      "ci_high_monthly_pct": 0.3084794495598762
+    },
+    {
+      "factor": "SMB",
+      "period": "full",
+      "series": "ex_micro",
+      "n": 282,
+      "mean_monthly_pct": 0.0303661732067602,
+      "vol_annual_pct": 8.29163307367044,
+      "t_HAC6": 0.2277173191918487,
+      "p_HAC6": 0.8198660073769563,
+      "ci_low_monthly_pct": -0.2309956153685381,
+      "ci_high_monthly_pct": 0.2917279617820587
+    },
+    {
+      "factor": "SMB",
+      "period": "full",
+      "series": "paired_difference",
+      "n": 282,
+      "mean_monthly_pct": 0.0091654193627438,
+      "vol_annual_pct": 1.422640138310197,
+      "t_HAC6": 0.3308136814854447,
+      "p_HAC6": 0.7407852258917769,
+      "ci_low_monthly_pct": -0.0451367236850303,
+      "ci_high_monthly_pct": 0.0634675624105179
+    },
+    {
+      "factor": "SMB",
+      "period": "early",
+      "series": "baseline",
+      "n": 138,
+      "mean_monthly_pct": 0.2514577080675542,
+      "vol_annual_pct": 7.666410941964809,
+      "t_HAC6": 1.3892138293719454,
+      "p_HAC6": 0.1647677376489754,
+      "ci_low_monthly_pct": -0.1033098885595201,
+      "ci_high_monthly_pct": 0.6062253046946288
+    },
+    {
+      "factor": "SMB",
+      "period": "early",
+      "series": "ex_micro",
+      "n": 138,
+      "mean_monthly_pct": 0.2591048584244682,
+      "vol_annual_pct": 7.364813371215427,
+      "t_HAC6": 1.658708639386446,
+      "p_HAC6": 0.0971745176559304,
+      "ci_low_monthly_pct": -0.0470587309320937,
+      "ci_high_monthly_pct": 0.56526844778103
+    },
+    {
+      "factor": "SMB",
+      "period": "early",
+      "series": "paired_difference",
+      "n": 138,
+      "mean_monthly_pct": 0.0076471503569138,
+      "vol_annual_pct": 1.4137029806970722,
+      "t_HAC6": 0.164808336504597,
+      "p_HAC6": 0.8690948421927117,
+      "ci_low_monthly_pct": -0.0832956963570043,
+      "ci_high_monthly_pct": 0.0985899970708321
+    },
+    {
+      "factor": "SMB",
+      "period": "late",
+      "series": "baseline",
+      "n": 144,
+      "mean_monthly_pct": -0.1994621606202072,
+      "vol_annual_pct": 9.511433547818497,
+      "t_HAC6": -0.9174754607160618,
+      "p_HAC6": 0.358893546110632,
+      "ci_low_monthly_pct": -0.6255647299347293,
+      "ci_high_monthly_pct": 0.2266404086943149
+    },
+    {
+      "factor": "SMB",
+      "period": "late",
+      "series": "ex_micro",
+      "n": 144,
+      "mean_monthly_pct": -0.1888417334602097,
+      "vol_annual_pct": 9.052472459382551,
+      "t_HAC6": -0.935206225601548,
+      "p_HAC6": 0.3496820307623924,
+      "ci_low_monthly_pct": -0.5846079144670151,
+      "ci_high_monthly_pct": 0.2069244475465955
+    },
+    {
+      "factor": "SMB",
+      "period": "late",
+      "series": "paired_difference",
+      "n": 144,
+      "mean_monthly_pct": 0.0106204271599974,
+      "vol_annual_pct": 1.436067939041897,
+      "t_HAC6": 0.3403260191877776,
+      "p_HAC6": 0.7336110248597874,
+      "ci_low_monthly_pct": -0.0505434379588204,
+      "ci_high_monthly_pct": 0.0717842922788154
+    },
+    {
+      "factor": "HML",
+      "period": "full",
+      "series": "baseline",
+      "n": 282,
+      "mean_monthly_pct": -0.0327654777468379,
+      "vol_annual_pct": 10.72796698055926,
+      "t_HAC6": -0.1579210749575012,
+      "p_HAC6": 0.874518991031432,
+      "ci_low_monthly_pct": -0.4394189680256467,
+      "ci_high_monthly_pct": 0.3738880125319708
+    },
+    {
+      "factor": "HML",
+      "period": "full",
+      "series": "ex_micro",
+      "n": 282,
+      "mean_monthly_pct": -0.1036506364767224,
+      "vol_annual_pct": 11.0272141440162,
+      "t_HAC6": -0.5018466870915328,
+      "p_HAC6": 0.6157753693331346,
+      "ci_low_monthly_pct": -0.508458558287255,
+      "ci_high_monthly_pct": 0.30115728533381
+    },
+    {
+      "factor": "HML",
+      "period": "full",
+      "series": "paired_difference",
+      "n": 282,
+      "mean_monthly_pct": -0.0708851587298844,
+      "vol_annual_pct": 1.2333214104663934,
+      "t_HAC6": -4.2481103584217665,
+      "p_HAC6": 2.155811978586075e-05,
+      "ci_low_monthly_pct": -0.1035896664820301,
+      "ci_high_monthly_pct": -0.0381806509777388
+    },
+    {
+      "factor": "HML",
+      "period": "early",
+      "series": "baseline",
+      "n": 138,
+      "mean_monthly_pct": 0.0812662427494184,
+      "vol_annual_pct": 8.493414407672939,
+      "t_HAC6": 0.3666174634482667,
+      "p_HAC6": 0.7139043799981308,
+      "ci_low_monthly_pct": -0.3531890814722573,
+      "ci_high_monthly_pct": 0.5157215669710943
+    },
+    {
+      "factor": "HML",
+      "period": "early",
+      "series": "ex_micro",
+      "n": 138,
+      "mean_monthly_pct": -0.0099350991106026,
+      "vol_annual_pct": 8.900387613673496,
+      "t_HAC6": -0.0436037872906714,
+      "p_HAC6": 0.96522023274946,
+      "ci_low_monthly_pct": -0.456511822132608,
+      "ci_high_monthly_pct": 0.4366416239114026
+    },
+    {
+      "factor": "HML",
+      "period": "early",
+      "series": "paired_difference",
+      "n": 138,
+      "mean_monthly_pct": -0.0912013418600211,
+      "vol_annual_pct": 1.229911045208883,
+      "t_HAC6": -3.463484391313502,
+      "p_HAC6": 0.000533227530431,
+      "ci_low_monthly_pct": -0.1428116063196139,
+      "ci_high_monthly_pct": -0.0395910774004283
+    },
+    {
+      "factor": "HML",
+      "period": "late",
+      "series": "baseline",
+      "n": 144,
+      "mean_monthly_pct": -0.1420458765557503,
+      "vol_annual_pct": 12.519913883760315,
+      "t_HAC6": -0.4119115241280539,
+      "p_HAC6": 0.6804042737385326,
+      "ci_low_monthly_pct": -0.8179308321685381,
+      "ci_high_monthly_pct": 0.5338390790570374
+    },
+    {
+      "factor": "HML",
+      "period": "late",
+      "series": "ex_micro",
+      "n": 144,
+      "mean_monthly_pct": -0.1934613597859205,
+      "vol_annual_pct": 12.761460971512642,
+      "t_HAC6": -0.5699940054937331,
+      "p_HAC6": 0.568681763865236,
+      "ci_low_monthly_pct": -0.8586916848874857,
+      "ci_high_monthly_pct": 0.4717689653156446
+    },
+    {
+      "factor": "HML",
+      "period": "late",
+      "series": "paired_difference",
+      "n": 144,
+      "mean_monthly_pct": -0.0514154832301702,
+      "vol_annual_pct": 1.2370959030871118,
+      "t_HAC6": -2.586381268045672,
+      "p_HAC6": 0.0096989579376397,
+      "ci_low_monthly_pct": -0.0903782211002136,
+      "ci_high_monthly_pct": -0.0124527453601268
+    }
+  ],
+  "sensitivity_comparison": [
+    {
+      "variant": "ex_micro",
+      "factor": "SMB",
+      "n": 282,
+      "mean_shift_bps": 0.9165419362743804,
+      "correlation_with_official": 0.983614765314075,
+      "RMSE_vs_official_bps": 45.751992246855735
+    },
+    {
+      "variant": "ex_micro",
+      "factor": "HML",
+      "n": 282,
+      "mean_shift_bps": -7.088515872988449,
+      "correlation_with_official": 0.9904348218288678,
+      "RMSE_vs_official_bps": 45.10980319895297
+    },
+    {
+      "variant": "original_BE",
+      "factor": "SMB",
+      "n": 282,
+      "mean_shift_bps": 2.9039056093170994,
+      "correlation_with_official": 0.9931420562093448,
+      "RMSE_vs_official_bps": 30.696564828892303
+    },
+    {
+      "variant": "original_BE",
+      "factor": "HML",
+      "n": 282,
+      "mean_shift_bps": -1.6631570210632862,
+      "correlation_with_official": 0.9809305675855976,
+      "RMSE_vs_official_bps": 59.824410668143344
+    },
+    {
+      "variant": "one_year_history",
+      "factor": "SMB",
+      "n": 282,
+      "mean_shift_bps": -0.2105170565595179,
+      "correlation_with_official": 0.9971518709938624,
+      "RMSE_vs_official_bps": 18.90297071765161
+    },
+    {
+      "variant": "one_year_history",
+      "factor": "HML",
+      "n": 282,
+      "mean_shift_bps": 0.5464707422194768,
+      "correlation_with_official": 0.9971518192030236,
+      "RMSE_vs_official_bps": 23.278014664616375
+    }
+  ],
+  "formation_coverage": [
+    {
+      "formation_year": 2002,
+      "firms": 4983,
+      "microcaps": 3116,
+      "june_me": 10925235.4398373,
+      "microcap_count_share": 0.6253261087698174,
+      "microcap_capital_share": 0.0246792020181777
+    },
+    {
+      "formation_year": 2003,
+      "firms": 4638,
+      "microcaps": 2788,
+      "june_me": 10853305.3328741,
+      "microcap_count_share": 0.6011211729193618,
+      "microcap_capital_share": 0.0252509767237356
+    },
+    {
+      "formation_year": 2004,
+      "firms": 4451,
+      "microcaps": 2704,
+      "june_me": 13104733.6359782,
+      "microcap_count_share": 0.6075039317007415,
+      "microcap_capital_share": 0.0329976402504667
+    },
+    {
+      "formation_year": 2005,
+      "firms": 4419,
+      "microcaps": 2715,
+      "june_me": 13928260.7210346,
+      "microcap_count_share": 0.6143923964697895,
+      "microcap_capital_share": 0.0350280376865576
+    },
+    {
+      "formation_year": 2006,
+      "firms": 4321,
+      "microcaps": 2650,
+      "june_me": 14722014.7121829,
+      "microcap_count_share": 0.6132839620458227,
+      "microcap_capital_share": 0.0373539579679145
+    },
+    {
+      "formation_year": 2007,
+      "firms": 4212,
+      "microcaps": 2572,
+      "june_me": 16870107.0601661,
+      "microcap_count_share": 0.610636277302944,
+      "microcap_capital_share": 0.0351485880068601
+    },
+    {
+      "formation_year": 2008,
+      "firms": 4159,
+      "microcaps": 2482,
+      "june_me": 13980100.0671111,
+      "microcap_count_share": 0.5967780716518394,
+      "microcap_capital_share": 0.0256207822433073
+    },
+    {
+      "formation_year": 2009,
+      "firms": 3873,
+      "microcaps": 2175,
+      "june_me": 10022960.0400747,
+      "microcap_count_share": 0.5615801704105344,
+      "microcap_capital_share": 0.0218153723970219
+    },
+    {
+      "formation_year": 2010,
+      "firms": 3702,
+      "microcaps": 2058,
+      "june_me": 11333490.6217226,
+      "microcap_count_share": 0.5559157212317666,
+      "microcap_capital_share": 0.0244892015598734
+    },
+    {
+      "formation_year": 2011,
+      "firms": 3563,
+      "microcaps": 1943,
+      "june_me": 14610591.89576345,
+      "microcap_count_share": 0.5453269716531013,
+      "microcap_capital_share": 0.0232327226241858
+    },
+    {
+      "formation_year": 2012,
+      "firms": 3464,
+      "microcaps": 1838,
+      "june_me": 14509439.1486632,
+      "microcap_count_share": 0.5306004618937644,
+      "microcap_capital_share": 0.0202831893518306
+    },
+    {
+      "formation_year": 2013,
+      "firms": 3341,
+      "microcaps": 1739,
+      "june_me": 16945153.58904215,
+      "microcap_count_share": 0.5205028434600419,
+      "microcap_capital_share": 0.0208799481609272
+    },
+    {
+      "formation_year": 2014,
+      "firms": 3348,
+      "microcaps": 1689,
+      "june_me": 20399818.9584363,
+      "microcap_count_share": 0.5044802867383512,
+      "microcap_capital_share": 0.0197022120314791
+    },
+    {
+      "formation_year": 2015,
+      "firms": 3434,
+      "microcaps": 1677,
+      "june_me": 21130144.8687765,
+      "microcap_count_share": 0.488351776354106,
+      "microcap_capital_share": 0.0168776373937917
+    },
+    {
+      "formation_year": 2016,
+      "firms": 3321,
+      "microcaps": 1647,
+      "june_me": 20370255.2280478,
+      "microcap_count_share": 0.4959349593495935,
+      "microcap_capital_share": 0.0150221174887717
+    },
+    {
+      "formation_year": 2017,
+      "firms": 3167,
+      "microcaps": 1574,
+      "june_me": 23197981.9523346,
+      "microcap_count_share": 0.4970003157562362,
+      "microcap_capital_share": 0.0162738052200099
+    },
+    {
+      "formation_year": 2018,
+      "firms": 3163,
+      "microcaps": 1537,
+      "june_me": 25922360.787602544,
+      "microcap_count_share": 0.4859310780904204,
+      "microcap_capital_share": 0.0159905835213197
+    },
+    {
+      "formation_year": 2019,
+      "firms": 3189,
+      "microcaps": 1522,
+      "june_me": 27023248.1546635,
+      "microcap_count_share": 0.4772656005017247,
+      "microcap_capital_share": 0.0119129994308231
+    },
+    {
+      "formation_year": 2020,
+      "firms": 3169,
+      "microcaps": 1405,
+      "june_me": 27986234.888767492,
+      "microcap_count_share": 0.443357526033449,
+      "microcap_capital_share": 0.0079858926769886
+    },
+    {
+      "formation_year": 2021,
+      "firms": 3239,
+      "microcaps": 1527,
+      "june_me": 40937816.6864501,
+      "microcap_count_share": 0.4714418030256252,
+      "microcap_capital_share": 0.0123718141795245
+    },
+    {
+      "formation_year": 2022,
+      "firms": 3619,
+      "microcaps": 1810,
+      "june_me": 34845926.12518643,
+      "microcap_count_share": 0.5001381597126278,
+      "microcap_capital_share": 0.0104849444686893
+    },
+    {
+      "formation_year": 2023,
+      "firms": 3537,
+      "microcaps": 1784,
+      "june_me": 39545773.03453448,
+      "microcap_count_share": 0.5043822448402601,
+      "microcap_capital_share": 0.0086066738334398
+    },
+    {
+      "formation_year": 2024,
+      "firms": 3357,
+      "microcaps": 1689,
+      "june_me": 50452863.42520775,
+      "microcap_count_share": 0.5031277926720286,
+      "microcap_capital_share": 0.0069188650808735
+    },
+    {
+      "formation_year": 2025,
+      "firms": 3225,
+      "microcaps": 1577,
+      "june_me": 57541309.926055446,
+      "microcap_count_share": 0.4889922480620155,
+      "microcap_capital_share": 0.0061065881642039
+    }
+  ]
+}

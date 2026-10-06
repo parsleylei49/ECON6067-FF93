@@ -6,3 +6,8 @@ data/
 04_Supplementary_Data/
 *.pkl
 .mplconfig/
+report-app/.data-app-offline/
+report-app/dist/
+report-app/node_modules/
+*.bundle
+*.zip
