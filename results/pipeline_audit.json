@@ -1,0 +1,37 @@
+{
+  "raw_stock_rows": 2423212,
+  "stock_rows_after_exact_selected_dedup": 2395133,
+  "rows_without_valid_security_interval": 14568,
+  "eligible_security_months": 1339396,
+  "eligible_delisting_months": 1175,
+  "eligible_missing_returns": 372,
+  "median_me_relative_to_reported_cap": 1.0,
+  "market_left_boundary_previous_cap_rows": 6589,
+  "firm_months_after_share_class_consolidation": 1322717,
+  "accounting_company_years": 301089,
+  "non_usd_company_years": 47806,
+  "missing_preferred_assumed_zero": 57792,
+  "equity_fallback_rows": 57274,
+  "duplicate_linked_security_year_candidates": 0,
+  "baseline_excluded_return_rows": 278,
+  "baseline_formation_firm_years": 88894,
+  "baseline_first_formation": 2002,
+  "baseline_last_formation": 2025,
+  "factor_missing_months": {
+    "MKT_RF": 0,
+    "SMB": 30,
+    "HML": 30
+  },
+  "min_cell_n": 100,
+  "retained_portfolio_delisting_rows": 837,
+  "tests_passed": [
+    "unique security-month after temporal resolution",
+    "accounting predates formation",
+    "unique June linked sample",
+    "positive nonempty six-portfolio weights",
+    "SMB arithmetic identity",
+    "HML arithmetic identity",
+    "312-month output grid",
+    "benchmark percent to decimal conversion"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "312 unique consecutive calendar months",
+    "No benchmark month lost to trading-day labels",
+    "Only initial 30 size/value months missing",
+    "Six portfolio returns agree with weighted numerator / denominator",
+    "SMB independently reconstructed from six saved columns",
+    "HML independently reconstructed from six saved columns",
+    "SMB paired mean and independent matrix HAC",
+    "HML paired mean and independent matrix HAC",
+    "Synthetic July weights equal June size",
+    "Synthetic August uses lagged ex-return growth",
+    "Synthetic gap excludes broken July-to-August chain",
+    "Synthetic missing ex-return invalidates subsequent weight",
+    "Million/thousand unit example"
+  ],
+  "scope": "Saved-result arithmetic, independent HAC, and synthetic timing edge cases. Not an independent full CRSP re-extraction."
+}

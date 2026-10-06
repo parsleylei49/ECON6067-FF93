@@ -5,3 +5,4 @@ data/
 02_Monthly_Stocks_and_Factors/
 04_Supplementary_Data/
 *.pkl
+.mplconfig/

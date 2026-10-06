@@ -72,7 +72,7 @@ def main():
     audit['official_factor_end'] = monthly[-1].split(',')[0]
     audit['official_factor_header'] = lines[0]
     audit['scope'] = 'Available stock/accounting data do not overlap the original July 1963–December 1991 test period.'
-    audit['course_requirements_status'] = 'Project page is password-protected; detailed requirements not yet verified.'
+    audit['course_requirements_status'] = 'Verified 6 October 2026; see docs/course_requirements.md. Initial audit screens are not final pipeline sample counts.'
     hashes = {}
     for p in [stock_path, comp_path, link_path, ff_path]:
         h=hashlib.sha256()
