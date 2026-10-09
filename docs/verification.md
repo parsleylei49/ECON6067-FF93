@@ -23,6 +23,6 @@ Initial classification screening and portfolio construction were separated: the 
 
 - Browser automation was blocked by its URL security policy for the local report. No workaround was used. Desktop/narrow visual layout, hover, source-menu and interactive controls remain unverified. Use the Markdown report and inspected PNGs as the primary coursework artifacts.
 - No independent vendor re-extraction, complete constituent-level attribution of benchmark gaps, filing-date availability test, trading-cost calculation, or replication of all original FF93 pricing regressions.
-- No GitHub repository creation, publication, permission change or final course submission. The local archive is a review package, not evidence of submission.
+- The project has been uploaded to the private GitHub repository `parsleylei49/ECON6067-FF93` with its existing history. Teaching-team invitations and final course submission have not been performed. The local archive is a review package, not evidence of submission.
 
 Core analytical limitations and exact covered months are disclosed in REPORT.md. The student should review both the interpretation and AI-use disclosure before publication or submission.

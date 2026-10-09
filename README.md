@@ -1,7 +1,7 @@
 # ECON6067 — Fama–French (1993) factor construction
 
 **LEI Jinqiu · 3036762812 · MEcon**  
-Finalized for submission: **9 October 2026**. No GitHub publication or course submission has been performed.
+Finalized for submission: **9 October 2026**. Uploaded to the private repository [parsleylei49/ECON6067-FF93](https://github.com/parsleylei49/ECON6067-FF93). Teaching-team access and formal course submission remain outstanding.
 
 ## Start here
 
@@ -117,11 +117,11 @@ git remote add origin https://github.com/YOUR_ACCOUNT/YOUR_REPOSITORY.git
 git push -u origin main
 ```
 
-Replace placeholders with your chosen account/repository. These commands have **not** been run on your behalf. Do not include raw data, the course password, restricted download links, the paper PDF or your virtual environment. A private repository with teaching-team access is the conservative default; public visibility also exposes the student name/ID in this coursework.
+The commands above are examples for a new remote; this project's origin is already configured and uploaded to `parsleylei49/ECON6067-FF93`. Do not include raw data, the course password, restricted download links, the paper PDF or your virtual environment. The repository is private; arrange teaching-team access before submission.
 
 If restored using `git clone` from the bundle, `origin` already points to that bundle. Use `git remote set-url origin https://github.com/YOUR_ACCOUNT/YOUR_REPOSITORY.git` instead of `git remote add origin`. See SUBMISSION.md for the complete distinction.
 
-The course requires an accessible GitHub URL, not merely a ZIP. Deadline: **18 October 2026, 23:59 Hong Kong**, according to the authenticated project brief. Review the final course page and submit the URL yourself, or explicitly authorize a later publication step with account, repository and visibility specified.
+The course requires an accessible GitHub URL, not merely a ZIP. Deadline: **18 October 2026, 23:59 Hong Kong**, according to the authenticated project brief. Confirm the submission channel and teaching-team GitHub accounts, grant access, and submit the repository URL. Uploading is not formal course submission.
 
 ## AI disclosure
 
