@@ -1,4 +1,6 @@
-# Verification record — 6 October 2026
+# Verification summary — finalized 9 October 2026
+
+Submission-format revision and the 13 saved-result/fixture checks were completed again on 9 October. The underlying empirical estimates are unchanged; earlier end-to-end checks remain the evidence for the original run.
 
 **Ready for student review with disclosed limitations.** This is not certification of exact historical replication, full early-period coverage or submission.
 

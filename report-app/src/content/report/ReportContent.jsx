@@ -31,7 +31,7 @@ export function ReportContent(){
   return <article className="report-content" aria-label="FF93 replication report">
     <header className="report-hero">
       <h1 data-data-app-title contentEditable={canEdit&&mode==='edit'} suppressContentEditableWarning onBlur={e=>{if(canEdit&&mode==='edit')setAppTitle(e.currentTarget.textContent.trim()||appTitle)}}>{appTitle}</h1>
-      <RichNarrative id="report:course" value="ECON6067 · Equity-factor construction · Evidence through December 2025" label="Edit course context" />
+      <RichNarrative id="report:course" value="ECON6067 Final Project · Finalized 9 October 2026 · Evidence through December 2025" label="Edit course context" />
     </header>
     {snapshot.reportSections.map(section=>visible(section.id)&&<section key={section.id} className="report-section">
       {section.queries.length ? <ReportSection id={section.id} title={section.title} queryId={section.queries[0]} queryIds={section.queries} sourceRowsByQuery={Object.fromEntries(section.queries.map(q=>[q,snapshot.queries[q].rows]))} showHeading={false}>

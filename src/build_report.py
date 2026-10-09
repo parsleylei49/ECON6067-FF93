@@ -15,7 +15,7 @@ def read(name): return pd.read_csv(R/(name+'.csv'))
 def table(frame, columns):
     rows=['| '+' | '.join(columns.values())+' |','| '+' | '.join(['---']*len(columns))+' |']
     for _,r in frame.iterrows():
-        rows.append('| '+' | '.join((f'{r[c]:.2g}' if c=='p_HAC6' else f'{r[c]:.3f}') if isinstance(r[c],float) else str(r[c]) for c in columns)+' |')
+        rows.append('| '+' | '.join((f'{r[c]:.2g}' if c=='p_HAC6' else f'{r[c]:.6f}' if c=='correlation' else f'{r[c]:.3f}') if isinstance(r[c],float) else str(r[c]) for c in columns)+' |')
     return '\n'.join(rows)
 
 # The interpretation is reviewed for this fixed input vintage. Do not silently
@@ -109,13 +109,13 @@ Summary means are arithmetic monthly means; annual volatility is monthly sample 
 add('replication','4. Replication results',f"""
 ## 4. Replication results and comparison
 
-### Benchmark alignment
+### Table 1. Alignment with the Kenneth French benchmark
 
 {table(comparison,{'factor':'Factor','n':'Months','correlation':'Correlation','mean_difference_bps':'Mean gap (bp/month)','RMSE_bps':'RMSE (bp/month)'})}
 
 The mean gap is reconstructed minus benchmark. MKT−RF is compared over January 2000–December 2025; SMB/HML over July 2002–December 2025. No unmatched month is treated as zero. Calendar-month normalization is essential: joining raw trading dates to calendar month-ends would incorrectly discard 91 market observations.
 
-### Summary statistics
+### Table 2. Summary statistics
 
 {table(summary,{'factor':'Factor','series':'Series','n':'Months','mean_monthly_pct':'Mean (%/month)','vol_annual_pct':'Volatility (%/year)','t_HAC6':'HAC t'})}
 
@@ -133,6 +133,8 @@ Define microcaps at each June formation as firms at or below the **20th percenti
 
 Across June formations, microcaps average **{micro_share:.1f}% of eligible firm counts** but only **{micro_cap:.2f}% of their June market equity** (unweighted averages of annual shares). They can still affect SMB/HML because the factors average portfolios rather than weight every constituent by its share of the entire market.
 
+### Table 3. Microcap exclusion: full-sample estimates
+
 {table(full,{'factor':'Factor','series':'Series','mean_monthly_pct':'Mean (%/month)','vol_annual_pct':'Volatility (%/year)','t_HAC6':'HAC t','p_HAC6':'p (normal)'})}
 
 The paired difference is ex-microcap minus baseline, using all 282 matched months. For SMB it is **+0.92 bp/month**, with a 95% HAC interval of **[−4.51, +6.35] bp/month**. Exclusion reduces annualized SMB volatility from 8.68% to 8.29%, but the mean change is not statistically distinguishable from zero. This rejects neither zero effect nor economically modest effects; it does not establish equivalence. In this sample a positive size premium does not appear to be concentrated in microcaps, and the baseline premium itself is weak.
@@ -144,6 +146,8 @@ As a stability check, split the sample at January 2014: July 2002–December 201
 
 add('validation','6. Robustness and validation',f"""
 ## 6. Robustness, validation and limitations
+
+### Table 4. Sensitivity to accounting and history conventions
 
 {table(sensitivity[sensitivity.variant.ne('ex_micro')],{'variant':'Construction variant','factor':'Factor','n':'Matched months','mean_shift_bps':'Mean shift vs baseline (bp)','RMSE_vs_official_bps':'RMSE vs benchmark (bp)'})}
 
@@ -162,34 +166,35 @@ The supplied data reproduce modern equity-factor movements closely after careful
 The most useful further improvement would be to obtain pre-2000 CRSP/Compustat history and independently reconcile the largest benchmark-gap months at the constituent level. This is a limitation of the delivered study, not evidence that missing returns are zero or that published factors should be copied into the reconstruction.
 """)
 
-add('ai','8. AI-use disclosure',"""
-## 8. AI-use disclosure and reproducibility
+add('ai','Appendix A. AI-use disclosure',"""
+## Appendix A. AI-use disclosure
 
-OpenAI Codex assisted with reading the course brief and paper, auditing supplied data, implementing the factor pipeline, generating figures and tables, writing this report and checking the results. The empirical estimates come from executed code on the supplied files, not from invented examples or a language model's remembered factor returns. AI-authored analysis remains subject to the student's review; this disclosure does not claim that the student has independently performed every check.
+OpenAI Codex was used to assist with interpreting the brief and paper, auditing the data, implementing the analysis, preparing tables and figures, drafting the report and validating results. All reported estimates were computed from the supplied datasets. This statement does not imply that all checks were independently performed by the student.
 
-Concrete corrections were made during development. Raw trading-day dates initially failed to align with calendar month-end benchmark labels, losing 91 matched market observations; dates were normalized and a 312-month test added. Blind first-row deduplication was rejected because historical security classifications conflict. A blanket month-end classification rule was refined to account for securities ending within a month. A single BE convention was replaced by an explicit modern baseline and original-tax-addback sensitivity. Missing early factors were left blank rather than copied from French. A broken local SciPy binary was avoided by implementing the small intercept-only HAC calculation directly and checking it independently.
+Validation included the official-factor comparison, portfolio identities, 13 additional automated checks and an independent matrix-form calculation of HAC standard errors. Material corrections included aligning trading dates to calendar months, resolving effective-dated security classifications rather than keeping arbitrary duplicate rows, and distinguishing modern book equity from the original deferred-tax convention. Unavailable early factors were not filled with benchmark values. The implementation and tests document these checks; the author remains responsible for reviewing and understanding the submitted work.
 
-Run `python src/replicate.py --data-root /path/to/downloads`, `python src/validate.py`, then `python src/build_report.py`. Inputs and access restrictions, exact environment versions, output schemas and review steps are documented in README.md, DATA_ACCESS.md and WORKFLOW.md. Raw licensed data, the course password and the paper PDF are not included in the repository. Git commits record actual audit, implementation and reporting stages. Local packaging is not GitHub publication or submission.
+The reproducibility package contains complete code, aggregate processed data, environment requirements, restricted-data access instructions and a reusable workflow. README.md provides the execution sequence. Restricted raw data and access credentials are excluded.
 """)
 
 add('references','References',"""
 ## References
 
 1. Fama, E. F. and French, K. R. (1993). Common risk factors in the returns on stocks and bonds. *Journal of Financial Economics*, 33(1), 3–56. [DOI](https://doi.org/10.1016/0304-405X(93)90023-5). Supplied PDF inspected, especially printed pp. 8–10 and 13–14.
-2. Kenneth R. French Data Library. [Three-factor definitions](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library/f-f_factors.html) and [six size/book-to-market portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/six_portfolios.html). Methods consulted 6 October 2026; numerical benchmark is the supplied July 2026 vintage.
+2. Kenneth R. French Data Library. [Three-factor definitions](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library/f-f_factors.html) and [six size/book-to-market portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/six_portfolios.html). Numerical benchmark: supplied July 2026 vintage.
 3. Kenneth R. French Data Library. [Data notes and historical construction changes](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html), including the CIZ transition and post-1992 deferred-tax convention.
 4. WRDS. [CIZ event-study macro documentation](https://wrds-www.wharton.upenn.edu/pages/wrds-research/macros/run-an-event-study-ciz-format-macro/), on delisting-return incorporation in CIZ.
-5. ECON6067. [Final-project brief](https://yan-xiong-courses.protected-courses.workers.dev/quantitative-tools/project/), authenticated course page consulted 6 October 2026; supplied data-package README and DATA_DICTIONARY files. Access-controlled data-download links are deliberately omitted.
+5. ECON6067. [Final-project brief](https://yan-xiong-courses.protected-courses.workers.dev/quantitative-tools/project/), requirements checked 9 October 2026; supplied data-package README and DATA_DICTIONARY files. Access-controlled data-download links are omitted.
 """)
 
 title='Reconstructing Fama–French equity factors: a modern-sample replication and microcap extension'
-report=f'# {title}\n\nLEI Jinqiu · Student ID 3036762812 · MEcon · ECON6067\n\n6 October 2026\n\n'
+sections=[s for s in sections if s['id']!='ai']+[s for s in sections if s['id']=='ai']
+report=f'# ECON6067 Final Project\n\n## {title}\n\n**Student:** LEI Jinqiu (雷锦秋)  \n**Student ID:** 3036762812  \n**Programme:** Master of Economics (MEcon)  \n**Selected paper:** Fama and French (1993)  \n**Finalized:** 9 October 2026\n\n---\n\n'
 for section in sections:
     report+=section['text']+'\n\n'
     if section['id']=='replication':
-        report+='![Figure 1. Matched-sample compounded factor indices](figures/factor_cumulative.png)\n\n![Figure 2. Monthly factor agreement; diagonal is equality](figures/factor_scatter.png)\n\n'
+        report+='![Figure 1. Matched-sample compounded factor indices](figures/factor_cumulative.png)\n\n*Figure 1. Reconstructed and benchmark compounded factor indices over matched months. Gross theoretical indices; vertical scales differ across factors.*\n\n![Figure 2. Monthly factor agreement; diagonal is equality](figures/factor_scatter.png)\n\n*Figure 2. Reconstructed versus benchmark monthly returns, in percent. The diagonal denotes equality.*\n\n'
     if section['id']=='extension':
-        report+='![Figure 3. Microcap exclusion with original breakpoints fixed](figures/microcap_extension.png)\n\n'
+        report+='![Figure 3. Microcap exclusion with original breakpoints fixed](figures/microcap_extension.png)\n\n*Figure 3. Baseline and ex-microcap factor indices, July 2002–December 2025. Baseline breakpoints are held fixed; trading costs are excluded.*\n\n'
 (ROOT/'REPORT.md').write_text(report)
 (R/'report_sections.json').write_text(json.dumps(sections,ensure_ascii=False,indent=2)+'\n')
 

@@ -1,6 +1,6 @@
 # Verified project brief
 
-Read through the authenticated course website on 6 October 2026:
+Rechecked through the authenticated course website on 9 October 2026:
 https://yan-xiong-courses.protected-courses.workers.dev/quantitative-tools/project/
 
 - Deadline: 18 October 2026, 23:59 Hong Kong time.
@@ -16,3 +16,5 @@ https://yan-xiong-courses.protected-courses.workers.dev/quantitative-tools/proje
 - The webpage does not specify a report page limit or require all original FF93 regressions; the assigned core is factor construction.
 
 Local completion and packaging do not constitute GitHub publication or submission.
+
+As of 9 October, the GitHub-sharing tutorial remains marked “link to be added”. The project page does not specify an upload form, Moodle destination or submission email. The course portal lists yanxiong@hku.hk as the instructor contact; it is not explicitly identified as the final-project submission address.

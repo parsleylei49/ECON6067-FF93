@@ -1,9 +1,11 @@
 # ECON6067 — Fama–French (1993) factor construction
 
 **LEI Jinqiu · 3036762812 · MEcon**  
-Completed local analysis: 6 October 2026. No GitHub publication or course submission has been performed.
+Finalized for submission: **9 October 2026**. No GitHub publication or course submission has been performed.
 
 ## Start here
+
+- [提交位置、步骤与渠道确认邮件](SUBMISSION.md): checked against the course website on 9 October 2026.
 
 - [Empirical report](REPORT.md): approximately 3,200 words, with motivation, sample construction, formulas, benchmark comparison, independent extension, robustness, limitations, references and AI disclosure.
 - [提交前请读](docs/提交前请读.md): concise Chinese explanation and submission checklist.
@@ -117,8 +119,10 @@ git push -u origin main
 
 Replace placeholders with your chosen account/repository. These commands have **not** been run on your behalf. Do not include raw data, the course password, restricted download links, the paper PDF or your virtual environment. A private repository with teaching-team access is the conservative default; public visibility also exposes the student name/ID in this coursework.
 
+If restored using `git clone` from the bundle, `origin` already points to that bundle. Use `git remote set-url origin https://github.com/YOUR_ACCOUNT/YOUR_REPOSITORY.git` instead of `git remote add origin`. See SUBMISSION.md for the complete distinction.
+
 The course requires an accessible GitHub URL, not merely a ZIP. Deadline: **18 October 2026, 23:59 Hong Kong**, according to the authenticated project brief. Review the final course page and submit the URL yourself, or explicitly authorize a later publication step with account, repository and visibility specified.
 
 ## AI disclosure
 
-Codex assisted with the analysis and writing. Executed evidence, checks and corrected errors are documented in REPORT.md §8. Student review remains necessary; do not remove the disclosure or imply unperformed independent work.
+AI assistance, validation and corrected errors are documented in REPORT.md Appendix A, as required by the course. The author remains responsible for reviewing and understanding the submission.
